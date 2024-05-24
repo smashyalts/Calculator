@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.craftsupport.calculator.HelloController">
+   <center>
+      <VBox alignment="CENTER" spacing="20.0">
+          <padding>
+              <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+          </padding>
+          <Label text="Hypotenuse" />
+         <TextField fx:id="hypotenuse" promptText="Hypotenuse" />
+          <Label text="Adjacent side" />
+         <TextField fx:id="adjacent" promptText="Adjacent side" />
+          <Label text="Opposite side" />
+         <TextField fx:id="opposite" promptText="Opposite side" />
+      
+          <Label fx:id="Result" />
+          <Button onAction="#onHelloButtonClick" text="Calculate" />
+      </VBox>
+   </center>
+</BorderPane>
