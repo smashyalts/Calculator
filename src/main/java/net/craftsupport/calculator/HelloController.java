@@ -30,11 +30,18 @@ public class HelloController {
             calculateOpposite();
         }
     }
-
+    public class PageNavigation {
+        public static void showPage(Class<?> appClass, String fxmlPath, Stage stage, double width, double height) throws IOException {
+            FXMLLoader fxmlLoader = new FXMLLoader(appClass.getResource(fxmlPath));
+            Scene scene = new Scene(fxmlLoader.load(), width, height);
+            stage.setScene(scene);
+            stage.show();
+        }
+    }
 @FXML
 private void onPageButtonClick2() throws IOException {
 Stage stage = HelloApplication.getBackup();
-    HelloApplication.PageNavigation.showPage(HelloApplication.class, "hello-view2.fxml", stage, 480, 420);
+    PageNavigation.showPage(HelloApplication.class, "hello-view2.fxml", stage, 480, 420);
 }
     private void calculateOpposite() {
         double a = Double.parseDouble(adjacent.getText());
