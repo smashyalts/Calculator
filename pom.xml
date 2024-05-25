@@ -64,7 +64,7 @@
                         <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>net.craftsupport.calculator/net.craftsupport.calculator.HelloApplication
+                            <mainClass>net.craftsupport.calculator/net.craftsupport.calculator.MainApp
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

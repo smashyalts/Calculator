@@ -4,14 +4,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.craftsupport.calculator.HelloApplication">
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.craftsupport.calculator.MainController">
    <center>
       <VBox alignment="CENTER" spacing="20.0">
           <padding>
               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
           </padding>
-            <Label text="Hypotenuse" />
+          <Label text="Hypotenuse" />
+            <TextField fx:id="hypotenusepage2" promptText="Hypotenuse" />
+          <Label text="Adjacent Katete"/>
+            <TextField fx:id="adjacentpage2" promptText="Adjacent Katete"/>
+          <Label text="Opposite Katete"/>
+            <TextField fx:id="oppositepage2" promptText="Opposite Katete"/>
+            <Label fx:id="Resultpage2" />
+            <Button onAction="#onCalculateButtonClick2" text="Calculate" />
+          <Button onAction="#onPage1buttonclick" text="Page 1" />
       </VBox>
    </center>
 </BorderPane>
