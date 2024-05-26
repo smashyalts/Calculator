@@ -4,7 +4,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane style="-fx-background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGPVuLQKffFbKHqriBKlnmMrgNpB29u3CuUOzppwaPYVwYadClkjT2OY70ydddQfG1VVRcsqbuR2tfzHzn6tuMw36GoREohyphenhyphen2AYzeZViBy_fbGx9WPp3nbQWLakGLjVXb8cmVuqLcCv4mp/w3840-h2400-c/sunlight-sea-wave-nature-8-4K.jpg)" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.craftsupport.calculator.MainController">
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.craftsupport.calculator.MainController" style="-fx-background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGPVuLQKffFbKHqriBKlnmMrgNpB29u3CuUOzppwaPYVwYadClkjT2OY70ydddQfG1VVRcsqbuR2tfzHzn6tuMw36GoREohyphenhyphen2AYzeZViBy_fbGx9WPp3nbQWLakGLjVXb8cmVuqLcCv4mp/w3840-h2400-c/sunlight-sea-wave-nature-8-4K.jpg)">
    <center>
       <VBox alignment="CENTER" spacing="20.0">
           <padding>
