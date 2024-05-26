@@ -17,8 +17,8 @@
           <Label text="Opposite Katete" />
             <TextField fx:id="oppositepage2" promptText="Opposite Katete" style="-fx-background-color: #4d4d4d; -fx-text-fill: #FFFFFF;" />
             <Label fx:id="Resultpage2" />
-            <Button onAction="#onCalculateButtonClick2" style="-fx-background-color: #4d474d;" text="Calculate" textFill="#eb4141" />
-          <Button onAction="#onPage1buttonclick" style="-fx-background-color: #4d474d;" text="Page 1" textFill="#eb4141" />
+            <Button onAction="#onCalculateButtonClick" style="-fx-background-color: #4d474d;" text="Calculate" textFill="#eb4141" />
+          <Button onAction="#onPagebuttonclick" style="-fx-background-color: #4d474d;" text="Page 1" textFill="#eb4141" />
       </VBox>
    </center>
 </BorderPane>

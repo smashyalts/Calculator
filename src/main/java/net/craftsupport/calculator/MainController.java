@@ -27,29 +27,25 @@ private TextField adjacentpage2;
 private TextField oppositepage2;
 @FXML
 private Label Resultpage2;
-    @FXML
-    protected void onPageButtonClick() throws IOException {
-        Stage stage = MainApp.getBackup();
-        PageNavigation.showPage(MainApp.class, "hello-view.fxml", stage, 480, 420);
-    }
+
     @FXML
     protected void onCalculateButtonClick() {
-        if (hypotenuse.getText().isEmpty() && !adjacent.getText().isEmpty() && !opposite.getText().isEmpty()) {
-            calculateHypotenuse();
-        } else if (!hypotenuse.getText().isEmpty() && adjacent.getText().isEmpty() && !opposite.getText().isEmpty()) {
-            calculateAdjacent();
-        } else if (!hypotenuse.getText().isEmpty() && !adjacent.getText().isEmpty() && opposite.getText().isEmpty()) {
-            calculateOpposite();
-        }
-    }
-    @FXML
-    protected void onCalculateButtonClick2() {
-        if (hypotenusepage2.getText().isEmpty() && !adjacentpage2.getText().isEmpty() && !oppositepage2.getText().isEmpty()) {
-            calculateHypotenusepage2();
-        } else if (!hypotenusepage2.getText().isEmpty() && adjacentpage2.getText().isEmpty() && !oppositepage2.getText().isEmpty()) {
-            calculateAdjacentpage2();
-        } else if (!hypotenusepage2.getText().isEmpty() && !adjacentpage2.getText().isEmpty() && oppositepage2.getText().isEmpty()) {
-            calculateOppositepage2();
+        if (MainApp.getPage() == 1) {
+            if (hypotenuse.getText().isEmpty() && !adjacent.getText().isEmpty() && !opposite.getText().isEmpty()) {
+                calculateHypotenuse();
+            } else if (!hypotenuse.getText().isEmpty() && adjacent.getText().isEmpty() && !opposite.getText().isEmpty()) {
+                calculateAdjacent();
+            } else if (!hypotenuse.getText().isEmpty() && !adjacent.getText().isEmpty() && opposite.getText().isEmpty()) {
+                calculateOpposite();
+            }
+        } else if (MainApp.getPage() == 2) {
+            if (hypotenusepage2.getText().isEmpty() && !adjacentpage2.getText().isEmpty() && !oppositepage2.getText().isEmpty()) {
+                calculateHypotenuse();
+            } else if (!hypotenusepage2.getText().isEmpty() && adjacentpage2.getText().isEmpty() && !oppositepage2.getText().isEmpty()) {
+                calculateAdjacent();
+            } else if (!hypotenusepage2.getText().isEmpty() && !adjacentpage2.getText().isEmpty() && oppositepage2.getText().isEmpty()) {
+                calculateOpposite();
+            }
         }
     }
 
@@ -64,49 +60,55 @@ private Label Resultpage2;
         }
     }
     @FXML
-    private void onPage1buttonclick() throws IOException {
+    private void onPagebuttonclick() throws IOException {
+        if (MainApp.getPage() == 1) {
+        MainApp.setPage(2);
         Stage stage = MainApp.getBackup();
         PageNavigation.showPage(MainApp.class, "hello-view.fxml", stage, 480, 420);
+    } else if (MainApp.getPage() == 2) {
+            MainApp.setPage(1);
+            Stage stage = MainApp.getBackup();
+            PageNavigation.showPage(MainApp.class, "hello-view2.fxml", stage, 480, 420);
+        }
     }
-@FXML
-private void onPageButtonClick2() throws IOException {
-Stage stage = MainApp.getBackup();
-    PageNavigation.showPage(MainApp.class, "hello-view2.fxml", stage, 480, 420);
-}
+
     private void calculateOpposite() {
-        double a = Double.parseDouble(adjacent.getText());
-        double h = Double.parseDouble(hypotenuse.getText());
-        double o = Math.sqrt(h * h - a * a);
-        Result.setText("Opposite side is: " + o);
+        if (MainApp.getPage() == 1) {
+            double a = Double.parseDouble(adjacent.getText());
+            double h = Double.parseDouble(hypotenuse.getText());
+            double o = Math.sqrt(h * h - a * a);
+            Result.setText("Opposite side is: " + o);
+        } else if (MainApp.getPage() == 2) {
+            double a = Double.parseDouble(adjacentpage2.getText());
+            double h = Double.parseDouble(hypotenusepage2.getText());
+            double o;
+            Resultpage2.setText("Opposite katete is: " + "o");
+        }
     }
     private void calculateAdjacent() {
-        double o = Double.parseDouble(opposite.getText());
-        double h = Double.parseDouble(hypotenuse.getText());
-        double a = Math.sqrt(h * h - o * o);
-        Result.setText("Adjacent side is: " + a);
+        if (MainApp.getPage() == 1) {
+            double o = Double.parseDouble(opposite.getText());
+            double h = Double.parseDouble(hypotenuse.getText());
+            double a = Math.sqrt(h * h - o * o);
+            Result.setText("Adjacent side is: " + a);
+        } else if (MainApp.getPage() == 2){
+            double o = Double.parseDouble(oppositepage2.getText());
+            double h = Double.parseDouble(hypotenusepage2.getText());
+            double a;
+            Resultpage2.setText("Adjacent katete is: " + "a");
+        }
     }
     private void calculateHypotenuse() {
-        double a = Double.parseDouble(adjacent.getText());
-        double o = Double.parseDouble(opposite.getText());
-        double h = Math.sqrt(a * a + o * o);
-        Result.setText("Hypotenuse is: " + h);
-    }
-    private void calculateOppositepage2() {
-        double a = Double.parseDouble(adjacentpage2.getText());
-        double h = Double.parseDouble(hypotenusepage2.getText());
-        double o;
-        Result.setText("Opposite katete is: " + "o");
-    }
-    private void calculateAdjacentpage2() {
-        double o = Double.parseDouble(oppositepage2.getText());
-        double h = Double.parseDouble(hypotenusepage2.getText());
-        double a;
-        Result.setText("Adjacent katete is: " + "a");
-    }
-    private void calculateHypotenusepage2() {
-        double a = Double.parseDouble(adjacentpage2.getText());
-        double o = Double.parseDouble(oppositepage2.getText());
-        double h;
-        Result.setText("Hypotenuse is: " + "h");
+        if (MainApp.getPage() == 1) {
+            double a = Double.parseDouble(adjacent.getText());
+            double o = Double.parseDouble(opposite.getText());
+            double h = Math.sqrt(a * a + o * o);
+            Result.setText("Hypotenuse is: " + h);
+        } else if (MainApp.getPage() == 2){
+            double a = Double.parseDouble(adjacentpage2.getText());
+            double o = Double.parseDouble(oppositepage2.getText());
+            double h;
+            Resultpage2.setText("Hypotenuse is: " + "h");
+        }
     }
 }

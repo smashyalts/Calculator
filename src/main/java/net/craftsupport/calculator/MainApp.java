@@ -9,6 +9,7 @@ import java.io.IOException;
 
 public class MainApp extends Application {
     static Stage backup;
+    static int page = 1;
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApp.class.getResource("hello-view.fxml"));
@@ -21,6 +22,12 @@ public class MainApp extends Application {
 
     public static Stage getBackup() {
         return backup;
+    }
+    public static int getPage() {
+        return page;
+    }
+    public static int setPage(int page) {
+        return MainApp.page = page;
     }
 
 
