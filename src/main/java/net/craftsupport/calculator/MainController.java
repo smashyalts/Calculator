@@ -58,6 +58,7 @@ private Label Resultpage2;
         public static void showPage(Class<?> appClass, String fxmlPath, Stage stage, double width, double height) throws IOException {
             FXMLLoader fxmlLoader = new FXMLLoader(appClass.getResource(fxmlPath));
             Scene scene = new Scene(fxmlLoader.load(), width, height);
+
             stage.setScene(scene);
             stage.show();
         }

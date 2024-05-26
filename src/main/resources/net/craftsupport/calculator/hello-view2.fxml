@@ -4,21 +4,21 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.craftsupport.calculator.MainController">
+<BorderPane style="-fx-background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGPVuLQKffFbKHqriBKlnmMrgNpB29u3CuUOzppwaPYVwYadClkjT2OY70ydddQfG1VVRcsqbuR2tfzHzn6tuMw36GoREohyphenhyphen2AYzeZViBy_fbGx9WPp3nbQWLakGLjVXb8cmVuqLcCv4mp/w3840-h2400-c/sunlight-sea-wave-nature-8-4K.jpg)" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.craftsupport.calculator.MainController">
    <center>
       <VBox alignment="CENTER" spacing="20.0">
           <padding>
               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
           </padding>
           <Label text="Hypotenuse" />
-            <TextField fx:id="hypotenusepage2" promptText="Hypotenuse" />
-          <Label text="Adjacent Katete"/>
-            <TextField fx:id="adjacentpage2" promptText="Adjacent Katete"/>
-          <Label text="Opposite Katete"/>
-            <TextField fx:id="oppositepage2" promptText="Opposite Katete"/>
+            <TextField fx:id="hypotenusepage2" promptText="Hypotenuse" style="-fx-background-color: #4d4d4d;" />
+          <Label text="Adjacent Katete" />
+            <TextField fx:id="adjacentpage2" promptText="Adjacent Katete" style="-fx-background-color: #4d4d4d;" />
+          <Label text="Opposite Katete" />
+            <TextField fx:id="oppositepage2" promptText="Opposite Katete" style="-fx-background-color: #4d4d4d; -fx-text-fill: #FFFFFF;" />
             <Label fx:id="Resultpage2" />
-            <Button onAction="#onCalculateButtonClick2" text="Calculate" />
-          <Button onAction="#onPage1buttonclick" text="Page 1" />
+            <Button onAction="#onCalculateButtonClick2" style="-fx-background-color: #4d474d;" text="Calculate" textFill="#eb4141" />
+          <Button onAction="#onPage1buttonclick" style="-fx-background-color: #4d474d;" text="Page 1" textFill="#eb4141" />
       </VBox>
    </center>
 </BorderPane>

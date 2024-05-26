@@ -5,22 +5,22 @@
 <?import javafx.scene.layout.*?>
 
 
-<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.craftsupport.calculator.MainController">
+<BorderPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.craftsupport.calculator.MainController" style="-fx-background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhGPVuLQKffFbKHqriBKlnmMrgNpB29u3CuUOzppwaPYVwYadClkjT2OY70ydddQfG1VVRcsqbuR2tfzHzn6tuMw36GoREohyphenhyphen2AYzeZViBy_fbGx9WPp3nbQWLakGLjVXb8cmVuqLcCv4mp/w3840-h2400-c/sunlight-sea-wave-nature-8-4K.jpg)">
    <center>
       <VBox alignment="CENTER" spacing="20.0">
           <padding>
               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
           </padding>
           <Label text="Hypotenuse" />
-         <TextField fx:id="hypotenuse" promptText="Hypotenuse" />
+         <TextField fx:id="hypotenuse" promptText="Hypotenuse" style="-fx-background-color: #4d4d4d;" />
           <Label text="Adjacent side" />
-         <TextField fx:id="adjacent" promptText="Adjacent side" />
+         <TextField fx:id="adjacent" promptText="Adjacent side" style="-fx-background-color: #4d4d4d;" />
           <Label text="Opposite side" />
-         <TextField fx:id="opposite" promptText="Opposite side" />
+         <TextField fx:id="opposite" promptText="Opposite side" style="-fx-background-color: #4d4d4d;" />
       
           <Label fx:id="Result" />
-          <Button onAction="#onCalculateButtonClick" text="Calculate" />
-         <Button layoutX="73.0" layoutY="315.0" onAction="#onPageButtonClick2" text="Page 2" />
+          <Button onAction="#onCalculateButtonClick" text="Calculate" textFill="#eb4141" style="-fx-background-color: #4d474d;" />
+         <Button layoutX="73.0" layoutY="315.0" onAction="#onPageButtonClick2" text="Page 2" textFill="#eb4141" style="-fx-background-color: #4d474d;"/>
       </VBox>
    </center>
 </BorderPane>
