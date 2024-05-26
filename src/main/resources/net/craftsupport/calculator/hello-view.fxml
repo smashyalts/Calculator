@@ -12,11 +12,11 @@
               <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
           </padding>
           <Label text="Hypotenuse" />
-         <TextField fx:id="hypotenuse" promptText="Hypotenuse" style="-fx-background-color: #4d4d4d;" />
+         <TextField fx:id="hypotenuse" promptText="Hypotenuse" style="-fx-background-color: #4d4d4d; -fx-text-fill: #FFFFFF;" />
           <Label text="Adjacent side" />
-         <TextField fx:id="adjacent" promptText="Adjacent side" style="-fx-background-color: #4d4d4d;" />
+         <TextField fx:id="adjacent" promptText="Adjacent side" style="-fx-background-color: #4d4d4d; -fx-text-fill: #FFFFFF;" />
           <Label text="Opposite side" />
-         <TextField fx:id="opposite" promptText="Opposite side" style="-fx-background-color: #4d4d4d;" />
+         <TextField fx:id="opposite" promptText="Opposite side" style="-fx-background-color: #4d4d4d; -fx-text-fill: #FFFFFF;"/>
       
           <Label fx:id="Result" />
           <Button onAction="#onCalculateButtonClick" text="Calculate" textFill="#eb4141" style="-fx-background-color: #4d474d;" />

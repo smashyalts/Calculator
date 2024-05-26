@@ -104,7 +104,8 @@ private Label Resultpage2;
             double o = Double.parseDouble(opposite.getText());
             double h = Math.sqrt(a * a + o * o);
             Result.setText("Hypotenuse is: " + h);
-        } else if (MainApp.getPage() == 2){
+        } else if (MainApp.getPage() == 2)
+        {
             double a = Double.parseDouble(adjacentpage2.getText());
             double o = Double.parseDouble(oppositepage2.getText());
             double h;
