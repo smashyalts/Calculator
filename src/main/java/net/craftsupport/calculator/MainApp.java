@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class MainApp extends Application {
-    static Stage backup;
+    static Stage stage;
     static int page = 1;
     @Override
     public void start(Stage stage) throws IOException {
@@ -17,11 +17,10 @@ public class MainApp extends Application {
         stage.setTitle("Pythagores Læresætning");
         stage.setScene(scene);
         stage.show();
-        backup = stage;
+        MainApp.stage = stage;
     }
-
-    public static Stage getBackup() {
-        return backup;
+    public static Stage getStage() {
+        return stage;
     }
     public static int getPage() {
         return page;
